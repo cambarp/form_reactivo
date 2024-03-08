@@ -1,0 +1,17 @@
+<div class="container">
+  <form [formGroup]="formulario" (ngSubmit)="guardarDatos()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" formControlName="nombre">
+  
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" formControlName="correo">
+  
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" formControlName="contrasena">
+  
+    <button type="submit"  >Enviar</button>
+  </form>
+  <app-form-hijo [datosPadre]="datosIngresados"  (D_padre)="DatosHijo($event)" ></app-form-hijo>
+
+</div>
+  
